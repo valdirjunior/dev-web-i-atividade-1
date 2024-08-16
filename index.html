@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meu_site</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
+    <script type="module">
+        import {mensagem, posts} from "./scripts/script.js";
+        console.log(mensagem);
+
+        const data = await posts();
+        console.log(data);
+    </script>
 </head>
 <body>
     <h1>Olá Mundo</h1>
