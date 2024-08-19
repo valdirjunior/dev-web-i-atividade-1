@@ -6,16 +6,18 @@
     <title>meu_site</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/script.js" type="module"></script>
-    <script type="module">
-        import {mensagem, posts} from "./scripts/script.js";
-        console.log(mensagem);
-
-        const data = await posts();
-        console.log(data);
-    </script>
 </head>
 <body>
     <h1>Olá World</h1>
     <p>Olha que bacana!</p>
+    <button id="botao1">Press me!</button>
 </body>
+<script type="module">
+    import {mensagem, posts} from "./scripts/script.js";
+    console.log(mensagem);
+    document.querySelector("#botao1").addEventListener("click", async(el) => {
+        const data = await posts();
+        console.log(data);
+    })
+</script>
 </html>
